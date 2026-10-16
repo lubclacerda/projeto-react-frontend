@@ -14,7 +14,7 @@ const EvolucaoFrequencia = () => {
       </div>
       <div className="chart-preview">
         <img 
-          src="https://picsum.photos/600/180?grayscale&random=9" 
+          src="https://img.magnific.com/vetores-premium/elemento-infografico-de-grafico-de-linha-08-design-infografico-vetorial-editavel_683813-394.jpg?semt=ais_hybrid&w=740&q=80" 
           alt="Gráfico de Evolução da Frequência" 
         />
       </div>

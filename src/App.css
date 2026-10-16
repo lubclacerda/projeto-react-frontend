@@ -1,22 +1,29 @@
+/* Reset total sem margens externas */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-body {
-  background-color: #f3f4f6;
-  color: #333;
+html, body, #root {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #e5e7eb;
+  overflow-x: hidden;
 }
 
+/* Container principal de tela cheia */
 .app-container {
   display: flex;
   flex-direction: column;
+  width: 100vw;
   min-height: 100vh;
 }
 
+/* Barra superior cinza */
 .top-header {
+  width: 100%;
   background-color: #e5e7eb;
   padding: 12px 24px;
   border-bottom: 1px solid #d1d5db;
@@ -30,20 +37,24 @@ body {
 
 .logo-area h1 {
   font-size: 1.25rem;
-  color: #111827;
-  font-weight: bold;
+  color: #000000;
+  font-weight: 700;
 }
 
+/* Estrutura principal lado a lado */
 .main-layout {
   display: flex;
   flex: 1;
+  width: 100%;
 }
 
+/* Menu lateral azul escuro */
 .sidebar {
-  width: 200px;
+  width: 220px;
   background-color: #003366;
   color: #ffffff;
   padding-top: 20px;
+  flex-shrink: 0;
 }
 
 .sidebar ul {
@@ -51,9 +62,10 @@ body {
 }
 
 .sidebar li {
-  padding: 14px 20px;
+  padding: 14px 24px;
   cursor: pointer;
   font-size: 0.95rem;
+  color: #ffffff;
   transition: background 0.2s;
 }
 
@@ -66,12 +78,14 @@ body {
   font-weight: 600;
 }
 
+/* Área central ocupando todo o restante da tela */
 .dashboard-content {
   flex: 1;
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr 320px; /* Lado esquerdo expande / Lado direito fixo */
   gap: 20px;
   padding: 24px;
+  background-color: #e5e7eb;
 }
 
 .left-content {
@@ -80,17 +94,20 @@ body {
   gap: 20px;
 }
 
+/* Título e descrição */
 .dashboard-header h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #0b2545;
+  font-weight: 700;
   margin-bottom: 4px;
 }
 
 .dashboard-header p {
-  color: #6b7280;
-  font-size: 0.9rem;
+  color: #4b5563;
+  font-size: 0.95rem;
 }
 
+/* Grid com os 4 cartões coloridos expandidos */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -103,6 +120,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 110px;
 }
 
 .stat-card.blue { background-color: #dbeafe; color: #1e40af; }
@@ -114,21 +132,21 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 
 .stat-value {
-  font-size: 1.8rem;
-  margin-top: 10px;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 8px;
 }
 
+/* Seções com fundo branco interno */
 .section-card {
-  background-color: #ffffff;
+  background-color: #f3f4f6;
   padding: 16px;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .section-title {
@@ -137,18 +155,26 @@ body {
   gap: 8px;
   margin-bottom: 12px;
   color: #1f2937;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
+/* Câmeras organizadas horizontalmente */
 .cameras-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: 16px;
+}
+
+.camera-item {
+  display: flex;
+  flex-direction: column;
 }
 
 .image-wrapper {
   position: relative;
   width: 100%;
-  height: 120px;
+  height: 140px;
   border-radius: 6px;
   overflow: hidden;
 }
@@ -163,7 +189,7 @@ body {
   position: absolute;
   top: 8px;
   left: 8px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0,0,0,0.4);
   padding: 2px 6px;
   border-radius: 4px;
 }
@@ -172,27 +198,30 @@ body {
   font-size: 0.8rem;
   color: #4b5563;
   margin-top: 6px;
+  font-weight: 500;
 }
 
+/* Gráfico na parte inferior */
 .chart-section {
   display: flex;
   gap: 20px;
   align-items: center;
+  background-color: #f3f4f6;
 }
 
 .chart-info {
-  width: 40%;
+  width: 35%;
 }
 
 .section-subtitle {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #6b7280;
   margin-top: 4px;
 }
 
 .chart-preview {
-  width: 60%;
-  height: 120px;
+  width: 65%;
+  height: 130px;
   border-radius: 6px;
   overflow: hidden;
 }
@@ -203,11 +232,12 @@ body {
   object-fit: cover;
 }
 
+/* Painel da direita - Alunos em risco */
 .right-content {
-  background-color: #ffffff;
+  background-color: #f3f4f6;
   padding: 16px;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  height: fit-content;
 }
 
 .risk-header {
@@ -215,69 +245,43 @@ body {
   align-items: center;
   gap: 8px;
   padding-bottom: 12px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #d1d5db;
+  color: #1f2937;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .student-list {
   list-style: none;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .student-item {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 0;
-  border-bottom: 1px solid #f3f4f6;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.student-item:last-child {
+  border-bottom: none;
 }
 
 .avatar {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .student-name {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #1f2937;
 }
 
 .student-grade {
   font-size: 0.75rem;
-  color: #9ca3af;
-}
-
-@media (max-width: 1024px) {
-  .dashboard-content {
-    grid-template-columns: 1fr;
-  }
-
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .main-layout {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-  }
-
-  .cameras-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .chart-section {
-    flex-direction: column;
-  }
-
-  .chart-info,
-  .chart-preview {
-    width: 100%;
-  }
+  color: #6b7280;
 }
