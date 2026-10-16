@@ -1,122 +1,80 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import Cabecalho from './components/Cabecalho';
+import CameraTempoReal from './components/CameraTempoReal';
+import CartaoInicial from './components/CartaoInicial';
+import EstudantesRisco from './components/EstudantesRisco';
+import EvolucaoFrequencia from './components/EvolucaoFrequencia';
+import MenuLateral from './components/MenuLateral';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [activeMenu, setActiveMenu] = useState('Início');
+
+  // Dados dos cards de estatísticas
+  const statsData = [
+    { title: 'Total de alunos', value: 482, color: 'blue', icon: '👤' },
+    { title: 'Presenças', value: 452, color: 'green', icon: '✔️' },
+    { title: 'Ausências', value: 30, color: 'red', icon: '❌' },
+    { title: 'Alunos em risco', value: 10, color: 'yellow', icon: '⚠️' }
+  ];
+
+  // Dados das câmeras em tempo real
+  const cameras = [
+    { id: '100', name: 'Sala 100', image: 'https://picsum.photos/300/180?random=1' },
+    { id: '101', name: 'Sala 101', image: 'https://picsum.photos/300/180?random=2' },
+    { id: '102', name: 'Sala 102', image: 'https://picsum.photos/300/180?random=3' }
+  ];
+
+  // Lista de alunos em risco
+  const riskStudents = [
+    { id: 1, name: 'Marina Silva', grade: '8º ano', avatar: 'https://i.pravatar.cc/150?img=1' },
+    { id: 2, name: 'Joanna Pires', grade: '9º ano', avatar: 'https://i.pravatar.cc/150?img=5' },
+    { id: 3, name: 'Pedro Machado', grade: '9º ano', avatar: 'https://i.pravatar.cc/150?img=11' },
+    { id: 4, name: 'João Pedro', grade: '5º ano', avatar: 'https://i.pravatar.cc/150?img=13' },
+    { id: 5, name: 'Mara Luiza', grade: '7º ano', avatar: 'https://i.pravatar.cc/150?img=20' }
+  ];
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="app-container">
+      <Header />
+      <div className="main-layout">
+        <Sidebar activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
+        
+        <main className="dashboard-content">
+          <div className="left-content">
+            <section className="dashboard-header">
+              <h2>Monitoramento de evasão escolar</h2>
+              <p>Acompanhe a frequência dos alunos em tempo real e receba alertas para prevenir a evasão escolar.</p>
+            </section>
 
-      <div className="ticks"></div>
+            {/* Grid dos Cards */}
+            <div className="stats-grid">
+              {statsData.map((stat, index) => (
+                <StatCard 
+                  key={index} 
+                  title={stat.title} 
+                  value={stat.value} 
+                  color={stat.color} 
+                  icon={stat.icon} 
+                />
+              ))}
+            </div>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+            {/* Acompanhamento em tempo real */}
+            <RealTimeCamera cameras={cameras} />
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+            {/* Gráfico de Evolução */}
+            <AttendanceChart />
+          </div>
+
+          {/* Painel lateral direito - Alunos em Risco */}
+          <aside className="right-content">
+            <RiskStudents students={riskStudents} />
+          </aside>
+        </main>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
