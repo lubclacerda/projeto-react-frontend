@@ -18,9 +18,9 @@ function App() {
   ];
 
   const cameras = [
-    { id: '100', name: 'Sala 100', image: 'https://picsum.photos/300/180?random=1' },
-    { id: '101', name: 'Sala 101', image: 'https://picsum.photos/300/180?random=2' },
-    { id: '102', name: 'Sala 102', image: 'https://picsum.photos/300/180?random=3' }
+    { id: '100', name: 'Sala 100', image: 'https://www.vitoria.es.gov.br/recursos/imagens/banco/2021/05/31/92355/ampliada@2x.jpg' },
+    { id: '101', name: 'Sala 101', image: 'https://imagens.ebc.com.br/40ElXFqWeWBSY7IEAGp3wvsr0Jg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2020-03-13t145129z_1265676104_rc22jf9wi6m7_rtrmadp_3_health-coronavirus-brazil.jpg?itok=EMef90XB' },
+    { id: '102', name: 'Sala 102', image: 'https://www.unisinos.br/noticias/wp-content/uploads/2017/08/primeiro-dia-poa-69-scaled.jpg' }
   ];
 
   const riskStudents = [
