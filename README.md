@@ -1,16 +1,53 @@
-# React + Vite
+# Projeto de Evasão Escolar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+-- Sobre o projeto
 
-Currently, two official plugins are available:
+Este projeto foi desenvolvido utilizando React com o objetivo de abordar a problemática da evasão escolar, contribuindo para a identificação de situações de risco e para a compreensão dos fatores que podem levar os estudantes a abandonar a escola.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+-- Objetivo
 
-## React Compiler
+Desenvolver uma aplicação web que auxilie na visualização e no acompanhamento de informações relacionadas à evasão escolar.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-- Tecnologias utilizadas
 
-## Expanding the ESLint configuration
+- React
+- JavaScript
+- HTML
+- CSS
+- Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-- Funcionalidades
+
+A aplicação possui componentes e telas relacionados ao acompanhamento de estudantes, incluindo áreas voltadas à visualização de riscos e à avaliação da frequência escolar.
+
+-- Como executar o projeto
+
+-- Pré-requisitos
+
+- Node.js
+- npm
+
+- Instalação
+
+Clone o repositório e acesse a pasta do projeto. Em seguida, execute:
+
+```bash
+npm install
+```
+
+-- Executar a aplicação
+
+```bash
+npm run dev
+```
+
+Depois, acesse no navegador o endereço local informado pelo terminal.
+
+-- Integrantes
+
+- [Jorge Henrique Lima do Amaral e Silva]
+- [Luísa Brandão Cordeiro Lacerda]
+
+--  Status
+
+Projeto acadêmico em desenvolvimento.
