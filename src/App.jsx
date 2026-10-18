@@ -52,7 +52,6 @@ function App() {
                 <p>Acompanhe a frequência dos alunos em tempo real e receba alertas para prevenir a evasão escolar.</p>
               </section>
 
-              {/* Cards de Estatísticas integrados diretamente */}
               <div className="stats-grid">
                 {statsData.map((stat, index) => (
                   <div key={index} className={`stat-card ${stat.color}`}>
