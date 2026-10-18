@@ -1,4 +1,4 @@
-# Projeto de Evasão Escolar
+# PermanEdu
 
 -- Sobre o projeto
 
