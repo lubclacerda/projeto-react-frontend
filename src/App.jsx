@@ -25,11 +25,11 @@ function App() {
   ];
 
   const riskStudents = [
-    { id: 1, name: 'Marina Silva', grade: '8º ano', avatar: 'https://i.pravatar.cc/150?img=1' },
-    { id: 2, name: 'Joanna Pires', grade: '9º ano', avatar: 'https://i.pravatar.cc/150?img=5' },
-    { id: 3, name: 'Pedro Machado', grade: '9º ano', avatar: 'https://i.pravatar.cc/150?img=11' },
-    { id: 4, name: 'João Pedro', grade: '5º ano', avatar: 'https://i.pravatar.cc/150?img=13' },
-    { id: 5, name: 'Mara Luiza', grade: '7º ano', avatar: 'https://i.pravatar.cc/150?img=20' }
+    { id: 1, name: 'Marina Silva', grade: '8º ano', avatar: 'https://thumbs.dreamstime.com/b/cara-bonita-do-adolescente-56492375.jpg' },
+    { id: 2, name: 'Joanna Pires', grade: '9º ano', avatar: 'https://img.magnific.com/fotos-gratis/retrato-de-close-up-da-bela-jovem-morena-caucasiana-com-pele-de-porcelana-brilhante-e-limpa_273609-9333.jpg?semt=ais_hybrid&w=740&q=80' },
+    { id: 3, name: 'Pedro Machado', grade: '9º ano', avatar: 'https://img.magnific.com/fotos-gratis/close-up-tiro-de-homem-bonito-encaracolado-adolescente-olha-pensativamente-para-cima_176532-8172.jpg?semt=ais_hybrid&w=740&q=80' },
+    { id: 4, name: 'João Pedro', grade: '5º ano', avatar: 'https://img.magnific.com/fotos-gratis/retrato-de-um-menino-russo_53876-30383.jpg?semt=ais_hybrid&w=740&q=80' },
+    { id: 5, name: 'Mara Luiza', grade: '7º ano', avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxoMCZXOO3ZZNHWMpxSA_dnwvUxuAH4aO5v2ppX9qyA1PHRjYSbSS01CSs&s=10' }
   ];
 
   const renderConteudo = () => {

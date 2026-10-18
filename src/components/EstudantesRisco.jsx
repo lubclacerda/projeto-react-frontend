@@ -25,7 +25,6 @@ export default function EstudantesRisco({ students }) {
             padding: '10px 0',
             borderBottom: '1px solid #f3f4f6'
           }}>
-            {/* Foto de perfil */}
             <img 
               src={student.avatar} 
               alt={student.name} 
@@ -38,7 +37,6 @@ export default function EstudantesRisco({ students }) {
               }} 
             />
 
-            {/* Informações do aluno alinhadas à esquerda */}
             <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
               <span style={{ fontSize: '0.95rem', fontWeight: '600', color: '#111827', lineHeight: '1.2' }}>
                 {student.name}

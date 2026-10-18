@@ -1,4 +1,4 @@
-# PermanEdu
+# Escola Segura
 
 -- Sobre o projeto
 

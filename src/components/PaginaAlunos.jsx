@@ -56,7 +56,6 @@ export default function PaginaAlunos() {
         </p>
       </div>
 
-      {/* Barra de Busca */}
       <div style={{ textAlign: 'center', marginBottom: '20px' }}>
         <input
           type="text"
@@ -75,7 +74,6 @@ export default function PaginaAlunos() {
         />
       </div>
 
-      {/* Tabela de Alunos */}
       <div style={{ background: '#fff', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }}>
         <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.9rem' }}>
           <thead>
@@ -131,7 +129,6 @@ export default function PaginaAlunos() {
         </table>
       </div>
 
-      {/* Card de Relatório do Aluno Selecionado */}
       {alunoSelecionado && (
         <div style={{
           marginTop: '24px',
